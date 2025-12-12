@@ -129,10 +129,10 @@ function spawnEnemy() {
     });
 }
 
-// -------------------- ОНОВЛЕННЯ ГРАВЦЯ --------------------
+
 function updatePlayer() {
 
-    // Клавіатура
+    
     if ((keys["ArrowLeft"] || keys["a"] || keys["A"]) && player.x > 20) {
         player.x -= player.speed;
     }
@@ -140,12 +140,12 @@ function updatePlayer() {
         player.x += player.speed;
     }
 
-    // Сенсорні кнопки
+    
     if (keys["left"] && player.x > 20) player.x -= player.speed;
     if (keys["right"] && player.x < 340) player.x += player.speed;
 }
 
-// -------------------- ЗІТКНЕННЯ --------------------
+
 function checkCollisions() {
     for (let e of enemies) {
         if (
@@ -159,7 +159,6 @@ function checkCollisions() {
     }
 }
 
-// -------------------- КІНЕЦЬ ГРИ --------------------
 function endGame() {
     gameOverState = true;
     document.getElementById("score").style.display = "none";
@@ -168,7 +167,7 @@ function endGame() {
     document.getElementById("gameOver").style.display = "block";
 }
 
-// -------------------- МАЛЮВАННЯ --------------------
+
 function drawPlayer() {
     ctx.fillStyle = "cyan";
     ctx.fillRect(player.x, player.y, player.width, player.height);
@@ -188,7 +187,6 @@ function drawEnemies() {
     });
 }
 
-// -------------------- ІГРОВИЙ ЦИКЛ --------------------
 function gameLoop() {
     if (gameOverState) return;
 
@@ -206,3 +204,4 @@ function gameLoop() {
 </body>
 
 </html>
+
