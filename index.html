@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
 <meta charset="UTF-8" />
-<title>Гоночна мінігра</title>
+<title>гоночна 2Д-мінігра</title>
 <style>
     body {
         margin: 0;
@@ -61,7 +61,7 @@
 <body>
 
 <div id="menu">
-    <h1>Гоночна мінігра</h1>
+    <h1>гоночна 2Д-мінігра</h1>
     <button onclick="startGame()">Старт</button>
 </div>
 
@@ -74,10 +74,10 @@
 <div id="score">Очки: 0</div>
 
 
-<div id="controls">
-    <div class="ctrl-btn" id="btnLeft">←</div>
-    <div class="ctrl-btn" id="btnRight">→</div>
-</div>
+ <div id="controls">
+ <div class="ctrl-btn" id="btnLeft">←</div>
+ <div class="ctrl-btn" id="btnRight">→</div>
+ </div>
 
 <canvas id="game" width="400" height="600"></canvas>
 
@@ -155,9 +155,9 @@ function checkCollisions() {
             player.y + player.height > e.y
         ) {
             endGame();
-        }
-    }
-}
+           }
+      }
+   }
 
 function endGame() {
     gameOverState = true;
@@ -196,12 +196,11 @@ function gameLoop() {
     drawPlayer();
     drawEnemies();
     checkCollisions();
-
     requestAnimationFrame(gameLoop);
 }
+    
 </script>
-
 </body>
-
 </html>
+
 
